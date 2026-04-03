@@ -1,81 +1,106 @@
-🚀 AI Task Scheduler
+AI Task Scheduler
 
-A modern, AI-powered task scheduling web app that automatically generates emails or reminders and sends them at the scheduled time.
+An intelligent, automated task scheduling system that combines AI-generated content, email automation, and a modern interactive dashboard to streamline daily workflows.
 
-✨ Features
-📅 Schedule tasks with date & time
-🧠 AI-generated:
-Email drafts
+✨ Overview
+
+AI Task Scheduler is a lightweight yet powerful web application that allows users to:
+
+Schedule tasks with precise date and time
+Automatically generate AI-powered content
+Send emails or reminders without manual intervention
+Track task status in real time (Pending / Completed)
+Manage tasks through a clean, modern UI
+
+This project demonstrates the integration of automation + AI + frontend UX into a single cohesive system.
+
+⚙️ Features
+🧠 AI-Powered Content Generation
+Uses Sarvam AI API to generate:
+Professional email drafts
 Smart reminders
-📧 Automatic email sending via Gmail SMTP
-⚡ Real-time task updates (auto-refresh UI)
-🗂️ CSV-based lightweight database
-🎨 Modern glassmorphism UI
-🛠️ Tech Stack
-Backend: Flask (Python)
-Frontend: HTML, CSS, JavaScript (embedded)
-AI Model: LLaMA 3 via Ollama
-Storage: CSV file
-Email Service: Gmail SMTP
-📁 Project Structure
-project/
-│── app.py
-│── tasks.csv
-⚙️ Setup Instructions
-1. Install Dependencies
-pip install flask flask-cors requests
-2. Install & Run Ollama (for AI)
+⏰ Automated Task Execution
+Background scheduler continuously monitors tasks
+Executes tasks when conditions are met
+📧 Email Automation
+Sends emails via Gmail SMTP
+Supports:
+AI-generated email drafts
+Reminder notifications
+📋 Task Management Dashboard
+View all tasks in real time
+Status indicators:
+🟡 Pending
+🟢 Done
+Delete tasks instantly
+🎨 Modern UI (Antigravity Design)
+Glassmorphism interface
+Smooth animations and transitions
+Fully responsive layout
+Clean and minimal UX
+🏗️ Tech Stack
 
-Download Ollama and run:
+Backend
 
-ollama run llama3
+Python
+Flask
+Threading (for scheduler)
 
-Make sure it's running at:
+Frontend
 
-http://localhost:11434
-3. Set Email Password (IMPORTANT)
+HTML + CSS + Vanilla JavaScript
+Glassmorphism + animated UI
 
-Set your Gmail App Password as an environment variable:
+APIs & Services
 
-Windows (PowerShell):
+Sarvam AI API (text generation)
+Gmail SMTP (email delivery)
+
+Storage
+
+CSV (lightweight local database)
+🔐 Security
+
+Sensitive credentials are securely handled using environment variables.
+
+Required Environment Variables
+setx EMAIL_USER "your_email@gmail.com"
 setx EMAIL_PASS "your_app_password"
-Mac/Linux:
-export EMAIL_PASS="your_app_password"
-4. Run the App
+setx SARVAM_API_KEY "your_api_key"
+
+⚠️ Restart your terminal after running the above commands.
+
+🚀 Getting Started
+1. Clone the Repository
+git clone <your-repo-url>
+cd <your-project-folder>
+2. Install Dependencies
+pip install flask flask-cors requests
+3. Set Environment Variables
+
+Use the setx commands mentioned above.
+
+4. Run the Application
 python app.py
-
-Open in browser:
-
-http://localhost:5000
-📌 How It Works
-Add a task (topic, date, time, type, email)
-Task is stored in tasks.csv
-Background thread checks tasks every 10 seconds
+5. Open in Browser
+http://127.0.0.1:5000
+🧠 How It Works
+User creates a task via the UI
+Task is stored in a CSV file
+Background scheduler checks tasks every 10 seconds
 When time matches:
-AI generates content using LLaMA 3
+AI generates content (if needed)
 Email is sent automatically
-Task marked as ✅ done
-🔄 Task Types
-Type	Action
-Email Draft	Sends AI-generated professional email
-Reminder	Sends short reminder message
-🧠 AI Integration
-
-Uses local LLM via Ollama:
-
-Email Prompt → "Write a professional email about {topic}"
-Reminder Prompt → "Write a short reminder about {topic}"
-⚠️ Important Notes
-Use Gmail App Password, NOT your real password
-Ensure Ollama is running before starting the app
-Email sending may fail if:
-App password is missing
-Internet is down
-SMTP blocked
-🚀 Future Improvements
-Google Calendar integration
-Push notifications (instead of email)
-User authentication
-Database (SQLite / MongoDB)
-Task priority & categories
-Mobile app version
+Task status updates to done
+📸 Key Highlights
+Real-time task updates without page reload
+Smooth animated UI interactions
+Fully automated workflow system
+Clean separation of backend and frontend logic
+📈 Future Improvements
+🔐 User authentication system
+🗄️ Database integration (MongoDB / PostgreSQL)
+📊 Task filtering (Pending / Done views)
+✏️ Edit task functionality
+☁️ Cloud deployment (Render / AWS / Vercel)
+📱 Mobile app version
