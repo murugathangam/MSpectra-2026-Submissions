@@ -109,8 +109,8 @@ def task_scheduler():
                     send_email(row["email"], row["topic"], body)
 
                 elif row["type"] == "reminder":
-                    body = generate_text(f"Write a short reminder about {row['topic']}")
-                    send_email(row["email"], "Reminder", body)
+                   body = f"Reminder: Do the work - {row['topic']}"
+                   send_email(row["email"], "Reminder", body)
 
                 row["status"] = "done"
 
