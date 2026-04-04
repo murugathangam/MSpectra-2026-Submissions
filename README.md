@@ -104,3 +104,4 @@ Clean separation of backend and frontend logic
 ✏️ Edit task functionality
 ☁️ Cloud deployment (Render / AWS / Vercel)
 📱 Mobile app version
+PPT: https://gamma.app/docs/AI-Scheduler-47i9iu7q3tl4d0p
