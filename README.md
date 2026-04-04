@@ -105,3 +105,4 @@ Clean separation of backend and frontend logic
 ☁️ Cloud deployment (Render / AWS / Vercel)
 📱 Mobile app version
 PPT: https://gamma.app/docs/AI-Scheduler-47i9iu7q3tl4d0p
+Video link: https://drive.google.com/file/d/1n8w8S7-dIGYFXPh1Klme0VEhID-V0mh9/view?usp=sharing
